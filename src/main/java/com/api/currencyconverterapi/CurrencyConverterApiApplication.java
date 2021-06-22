@@ -8,6 +8,8 @@ public class CurrencyConverterApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CurrencyConverterApiApplication.class, args);
+		
+		System.out.println("Hello Currency API");
 	}
 
 }
