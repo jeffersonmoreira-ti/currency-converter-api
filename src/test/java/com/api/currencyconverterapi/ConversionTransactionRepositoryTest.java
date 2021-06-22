@@ -19,8 +19,9 @@ public class ConversionTransactionRepositoryTest {
     @Test
     void contextLoads() {
 
-        ConversionTransaction conversionTransaction = new ConversionTransaction("123412", "BRL",
-                BigDecimal.valueOf(1235), "USD", BigDecimal.valueOf(5.08), LocalDateTime.now());
+        ConversionTransaction conversionTransaction = new ConversionTransaction("123412",
+                "BRL", BigDecimal.valueOf(1235), "USD",
+                BigDecimal.valueOf(5.08), LocalDateTime.now());
 
         this.ctr.save(conversionTransaction);
     }
