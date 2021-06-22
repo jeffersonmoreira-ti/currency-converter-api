@@ -9,7 +9,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class ConversionTransactionModel {
+public class ConversionTransaction {
 
 	@Id
 
@@ -25,12 +25,13 @@ public class ConversionTransactionModel {
 	@LastModifiedDate
 	private LocalDateTime conversionResponseUTC;
 
-	public ConversionTransactionModel() {
+	public ConversionTransaction() {
 		super();
 	}
 
-	public ConversionTransactionModel(String userId, String sourceCurrency, BigDecimal sourceValue,
-			String destinationCurrency, BigDecimal appliedConversionRate, LocalDateTime conversionRequestUTC) {
+	public ConversionTransaction(String userId, String sourceCurrency, BigDecimal sourceValue,
+								 String destinationCurrency, BigDecimal appliedConversionRate,
+								 LocalDateTime conversionRequestUTC) {
 		super();
 		UserId = userId;
 		this.sourceCurrency = sourceCurrency;
