@@ -11,20 +11,20 @@ import reactor.core.publisher.Mono;
 public class ConversionTransactionImpl implements ConversionTransactionService {
 
     @Autowired
-    ConversionTransactionRepository ctr;
+    ConversionTransactionRepository conversionTransactionRepository;
 
     @Override
     public Flux<ConversionTransaction> findAll() {
-        return ctr.findAll();
+        return conversionTransactionRepository.findAll();
     }
 
     @Override
     public Mono<ConversionTransaction> findById(String id) {
-        return ctr.findById(id);
+        return conversionTransactionRepository.findById(id);
     }
 
     @Override
     public Mono<ConversionTransaction> save(ConversionTransaction conversionTransaction) {
-        return ctr.save(conversionTransaction);
+        return conversionTransactionRepository.save(conversionTransaction);
     }
 }
