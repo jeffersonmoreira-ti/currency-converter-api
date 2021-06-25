@@ -11,4 +11,5 @@ public interface ConversionTransactionService {
     Mono<ConversionTransaction> findById(String id);
 
     Mono<ConversionTransaction> save(ConversionTransaction conversionTransaction);
+
 }

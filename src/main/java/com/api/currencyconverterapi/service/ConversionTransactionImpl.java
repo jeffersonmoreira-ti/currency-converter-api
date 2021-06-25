@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 public class ConversionTransactionImpl implements ConversionTransactionService {
 
     @Autowired
-    ConversionTransactionRepository conversionTransactionRepository;
+    private ConversionTransactionRepository conversionTransactionRepository;
 
     @Override
     public Flux<ConversionTransaction> findAll() {
@@ -27,4 +27,7 @@ public class ConversionTransactionImpl implements ConversionTransactionService {
     public Mono<ConversionTransaction> save(ConversionTransaction conversionTransaction) {
         return conversionTransactionRepository.save(conversionTransaction);
     }
+
+
+
 }
